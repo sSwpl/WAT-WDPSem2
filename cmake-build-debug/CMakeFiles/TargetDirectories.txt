@@ -1,0 +1,3 @@
+/Users/awi/Documents/Projects/WDP/cmake-build-debug/CMakeFiles/WDP.dir
+/Users/awi/Documents/Projects/WDP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/awi/Documents/Projects/WDP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
