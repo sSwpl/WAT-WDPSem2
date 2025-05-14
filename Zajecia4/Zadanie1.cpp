@@ -37,6 +37,12 @@ void addGroup(Node*& head, int values[], int size) {
     }
 }
 
+// Generator liczb pseudolosowych (LCG)
+int myRand(int& seed, int min, int max) {
+    seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+    return min + (seed % (max - min + 1));
+}
+
 // Usuwa element o zadanej wartości z listy i wypisuje odpowiedni komunikat
 void removeObject(Node*& head, int value) {
     if (!head) {
@@ -98,14 +104,13 @@ void clearList(Node*& head) {
 }
 
 int main() {
-    Node* head = nullptr; // Wskaźnik na początek listy
+    Node* head = nullptr;
     int choice;
 
     do {
-        // Menu użytkownika
         cout << "\nMenu:\n";
         cout << "1. Dodaj obiekt\n";
-        cout << "2. Dodaj grupę obiektów\n";
+        cout << "2. Dodaj grupę obiektów (generator)\n";
         cout << "3. Usuń obiekt\n";
         cout << "4. Znajdź obiekt\n";
         cout << "5. Wylistuj zapisane obiekty\n";
@@ -122,16 +127,19 @@ int main() {
                 break;
             }
             case 2: {
-                int n;
+                int n, min, max, seed;
                 cout << "Podaj liczbę elementów: ";
                 cin >> n;
-                int* values = (int*)malloc(n * sizeof(int)); // Alokacja tablicy
-                cout << "Podaj wartości: ";
+                cout << "Podaj zakres (min max): ";
+                cin >> min >> max;
+                cout << "Podaj ziarno generatora: ";
+                cin >> seed;
+                int* values = (int*)malloc(n * sizeof(int));
                 for (int i = 0; i < n; ++i) {
-                    cin >> values[i];
+                    values[i] = myRand(seed, min, max);
                 }
                 addGroup(head, values, n);
-                free(values); // Zwolnienie pamięci
+                free(values);
                 break;
             }
             case 3: {
@@ -164,6 +172,6 @@ int main() {
         }
     } while (choice != 0);
 
-    clearList(head); // Zwolnienie pamięci przed zakończeniem programu
+    clearList(head);
     return 0;
 }

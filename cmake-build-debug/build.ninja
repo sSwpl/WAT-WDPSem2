@@ -49,11 +49,11 @@ cmake_ninja_workdir = /Users/awi/Documents/Projects/WDP/cmake-build-debug/
 
 build cmake_object_order_depends_target_WDP: phony || .
 
-build CMakeFiles/WDP.dir/Zajecia5/Zadanie2.cpp.o: CXX_COMPILER__WDP_unscanned_Debug /Users/awi/Documents/Projects/WDP/Zajecia5/Zadanie2.cpp || cmake_object_order_depends_target_WDP
-  DEP_FILE = CMakeFiles/WDP.dir/Zajecia5/Zadanie2.cpp.o.d
+build CMakeFiles/WDP.dir/Zajecia4/Zadanie1.cpp.o: CXX_COMPILER__WDP_unscanned_Debug /Users/awi/Documents/Projects/WDP/Zajecia4/Zadanie1.cpp || cmake_object_order_depends_target_WDP
+  DEP_FILE = CMakeFiles/WDP.dir/Zajecia4/Zadanie1.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk -mmacosx-version-min=15.3 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/WDP.dir
-  OBJECT_FILE_DIR = CMakeFiles/WDP.dir/Zajecia5
+  OBJECT_FILE_DIR = CMakeFiles/WDP.dir/Zajecia4
 
 
 # =============================================================================
@@ -63,7 +63,7 @@ build CMakeFiles/WDP.dir/Zajecia5/Zadanie2.cpp.o: CXX_COMPILER__WDP_unscanned_De
 #############################################
 # Link the executable WDP
 
-build WDP: CXX_EXECUTABLE_LINKER__WDP_Debug CMakeFiles/WDP.dir/Zajecia5/Zadanie2.cpp.o
+build WDP: CXX_EXECUTABLE_LINKER__WDP_Debug CMakeFiles/WDP.dir/Zajecia4/Zadanie1.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk -mmacosx-version-min=15.3
   OBJECT_DIR = CMakeFiles/WDP.dir
   POST_BUILD = :
