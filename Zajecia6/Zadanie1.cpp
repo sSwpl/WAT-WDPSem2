@@ -1,3 +1,5 @@
+//Zadanie 6
+//WCY24KY4S1 Stanisław Wieczyński
 #include <iostream>
 using namespace std;
 
