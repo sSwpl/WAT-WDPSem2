@@ -4,4 +4,4 @@ project(WDP)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(WDP
-        Zajecia6/Zadanie1.cpp)
+        Zajecia7/Zadanie3.cpp)
