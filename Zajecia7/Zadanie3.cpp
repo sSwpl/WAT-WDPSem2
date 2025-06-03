@@ -24,7 +24,7 @@ void printArray(int* arr, int n, const char* header) {
 
 // Sortowanie przez wstawianie (Insertion Sort)
 void insertionSort(int* arr, int n) {
-    for (int i = 1; i < n; ++i) {
+    for (int i = 1; i < n; ++i) {   
         int j = i;
         while (j > 0 && arr[j] < arr[j - 1]) {
             int tmp = arr[j];
